@@ -176,34 +176,48 @@
 
   /* 🎵 Reproductor con dos botones grandes */
   .music-player{
-    position:fixed;
-    bottom:30px;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    gap: 25px;
-    background:rgba(0,0,0,0.5);
-    padding: 18px 30px;
-    border-radius: 60px;
-    backdrop-filter: blur(8px);
-    border: 2px solid rgba(180,126,220,0.6);
-    box-shadow:0 0 30px rgba(180,100,220,0.5);
-    z-index:999999;
-  }
+  position:fixed;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap: 15px;
+  background:rgba(0,0,0,0.5);
+  padding: 12px 20px;
+  border-radius: 60px;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(180,126,220,0.6);
+  box-shadow:0 0 30px rgba(180,100,220,0.5);
+  z-index:999999;
+}
 
-  .music-btn{
-    background: #6b2a38;
-    border: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow:0 0 15px rgba(180,100,220,0.7);
-    transition: all 0.2s ease;
-    letter-spacing: 2px;
+.music-btn{
+  background: #6b2a38;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow:0 0 15px rgba(180,100,220,0.7);
+  transition: all 0.2s ease;
+  letter-spacing: 2px;
+}
+
+/* Específico para móviles */
+@media (max-width: 600px) {
+  .music-player {
+    padding: 6px 10px !important;
+    gap: 6px !important;
+    bottom: 20px !important;
   }
+  .music-btn {
+    font-size: 14px !important;
+    padding: 5px 10px !important;
+    min-width: 80px !important;
+  }
+}
 
   .music-btn:hover{
     background: #b57edc;
